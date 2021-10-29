@@ -1,10 +1,10 @@
 {
   "name": "wen-juan123",
-  "version": "0.0.0",
-  "description": "WenJuan123",
+  "version": "0.0.1",
+  "description": "",
   "main": "server.js",
   "author": {
-    "name": ""
+    "name": "l_o_o_k"
   },
   "dependencies": {
     "express": "^4.17.1",
