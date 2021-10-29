@@ -5,12 +5,20 @@ const io = require('nodejs-websocket')
 
 app.use('/pages',express.static('pages'))
 
-app.get('/', function (req, res) {
+app.get('/', (req, res)=> {
     res.sendFile(__dirname + "/pages/" + "index.html")
 })
 
-app.get('/HDUwenjuan123', function (req, res) {
+app.get('/wenjuan/123', (req, res)=> {
     res.sendFile(__dirname + "/pages/" + "HDUwenjuan123.html")
+})
+
+app.get('/wenjuan/123-result', (req, res) => {
+    res.sendFile(__dirname + "/pages/" + "HDUwenjuan123result.html")
+})
+
+app.all('/*', (req, res) => {
+    res.sendFile(__dirname + "/pages/" + "404.html")
 })
 
 io.createServer(connection => {
@@ -28,14 +36,14 @@ io.createServer(connection => {
         }
     })
     connection.on("close", function (code, reason) {
-        console.log("连接关闭")
+        console.log("连接关闭...")
     })
     connection.on("error", () => {
         console.log('因错误关闭连接...')
     })
 }).listen(3000)
 
-var server = app.listen(8081, function () {
+var server = app.listen(8081, ()=> {
     var host = server.address().address
     var port = server.address().port
     console.log("服务器启动在http://%s:%s", host, port)

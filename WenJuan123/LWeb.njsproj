@@ -2,7 +2,7 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-    <Name>WenJuan123</Name>
+    <Name>LWeb</Name>
     <RootNamespace>WenJuan123</RootNamespace>
     <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
   </PropertyGroup>
@@ -11,7 +11,8 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>f8bbf21f-1dda-4b61-9651-c369480605ca</ProjectGuid>
-    <ProjectHome>.</ProjectHome>
+    <ProjectHome>
+    </ProjectHome>
     <StartupFile>server.js</StartupFile>
     <SearchPath>
     </SearchPath>
@@ -29,6 +30,8 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="config\config.json" />
+    <Content Include="models\index.js" />
     <Content Include="pages\404.html" />
     <Content Include="pages\css\404.css" />
     <Content Include="pages\css\HDUwenjuan123.css" />
@@ -48,10 +51,14 @@
     <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="config\" />
+    <Folder Include="migrations\" />
+    <Folder Include="models\" />
     <Folder Include="pages\" />
     <Folder Include="pages\css\" />
     <Folder Include="pages\img\" />
     <Folder Include="pages\js\" />
+    <Folder Include="seeders\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>
