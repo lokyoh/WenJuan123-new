@@ -1,0 +1,86 @@
+body {
+    background-color: rgb(200, 250, 255);
+    margin: 0;
+}
+
+.top {
+    background-color: rgb(100, 210, 250);
+    border-bottom: 2px solid whitesmoke;
+    height: 60px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    user-select: none;
+}
+
+.logo{
+    margin: 6px;
+    -webkit-user-drag: none;
+}
+
+.webname{
+    margin: 6px;
+    -webkit-user-drag: none;
+}
+
+.bottom {
+    font-size: 10px;
+    text-align: center;
+    border-top: 2px solid whitesmoke;
+    padding: 10px;
+    user-select: none;
+}
+
+button {
+    color: white;
+    background-color: lightskyblue;
+    border: none;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px 5px 5px 5px;
+    user-select: none;
+}
+
+button:hover {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.20), 0 4px 5px 0 rgba(70, 5, 5, 0.15);
+    background-color: rgb(110, 200, 255);
+}
+
+button:active {
+    background-color: rgb(110, 200, 255);
+    transform: translateY(2px);
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: gray;
+}
+
+a:active {
+    text-decoration: none;
+    color: gray;
+}
+
+#webname{
+    font-size: 30px;
+    color: whitesmoke;
+    position:relative;
+    top: -17px;
+    left: 10px;
+}

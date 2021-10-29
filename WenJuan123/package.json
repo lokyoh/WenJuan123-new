@@ -1,0 +1,13 @@
+{
+  "name": "wen-juan123",
+  "version": "0.0.0",
+  "description": "WenJuan123",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodejs-websocket": "^1.7.2"
+  }
+}
