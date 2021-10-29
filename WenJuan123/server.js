@@ -1,4 +1,3 @@
-
 var express = require('express')
 var app = express();
 var server = require('http').Server(app)
@@ -12,13 +11,12 @@ app.get('/', function (req, res) {
 
 app.get('/HDUwenjuan123', function (req, res) {
     res.sendFile(__dirname + "/pages/" + "HDUwenjuan123.html");
-
 })
 
 io.createServer(connection => {
-    console.log('new connection...')
+    console.log('新的连接...');
     connection.on('text', function (data) {
-        console.log('message:' + data);
+        console.log('收到消息:' + data);
         var r = data.match(/.*?(?=:)/);
         if (r == 'request') {
             var str = data.match(/(?<=:).*/);
@@ -30,15 +28,15 @@ io.createServer(connection => {
         }
     })
     connection.on("close", function (code, reason) {
-        console.log("Connection closed")
+        console.log("连接关闭")
     })
     connection.on("error", () => {
-        console.log('close with error...')
+        console.log('因错误关闭连接...');
     })
-}).listen(3000)
+}).listen(3000);
 
 var server = app.listen(8081, function () {
-    var host = server.address().address
-    var port = server.address().port
-    console.log("web open on http://%s:%s", host, port)
-})
+    var host = server.address().address;
+    var port = server.address().port;
+    console.log("web open on http://%s:%s", host, port);
+});
