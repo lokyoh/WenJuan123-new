@@ -33,7 +33,7 @@ io.createServer(connection => {
     connection.on("error", () => {
         console.log('因错误关闭连接...')
     })
-}).listen(3000)
+}).listen(3000);
 
 var server = app.listen(8081, function () {
     var host = server.address().address
