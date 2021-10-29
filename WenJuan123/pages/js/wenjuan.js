@@ -155,10 +155,9 @@ function submitar() {
                     b2++;
                 }
             }
-            if (b2 != 0 && !(b2 <= a.max && b2 >= a.min)) {
+            if (b2 != 0 && !(b2 <= a.getAttribute('max') && b2 >= a.getAttribute('min'))) {
                 qusc[bc] = i + 1;
                 bc++;
-                console.log(bc + " " + document.getElementById(questions[i]).max + " " + document.getElementById(questions[i]).min)
             }
             var ta = a.getElementsByTagName("textarea");
             for (j = 0; j < ta.length; j++) {
