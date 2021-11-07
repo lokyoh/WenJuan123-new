@@ -30,8 +30,6 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="config\config.json" />
-    <Content Include="models\index.js" />
     <Content Include="pages\404.html" />
     <Content Include="pages\css\404.css" />
     <Content Include="pages\css\HDUwenjuan123.css" />
@@ -51,14 +49,10 @@
     <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="config\" />
-    <Folder Include="migrations\" />
-    <Folder Include="models\" />
     <Folder Include="pages\" />
     <Folder Include="pages\css\" />
     <Folder Include="pages\img\" />
     <Folder Include="pages\js\" />
-    <Folder Include="seeders\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>

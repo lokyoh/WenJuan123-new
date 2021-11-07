@@ -1,5 +1,5 @@
 {
-  "name": "wen-juan123",
+  "name": "lweb",
   "version": "0.0.1",
   "description": "",
   "main": "server.js",
@@ -8,8 +8,6 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "nodejs-websocket": "^1.7.2",
-    "sequelize": "^6.8.0",
-    "sequelize-cli": "^6.2.0"
+    "nodejs-websocket": "^1.7.2"
   }
 }

@@ -17,6 +17,11 @@ app.get('/wenjuan/123-result', (req, res) => {
     res.sendFile(__dirname + "/pages/" + "HDUwenjuan123result.html")
 })
 
+// http://*.*/wenjuan?request=123
+app.post('/wenjuan', (req, res) => {
+    res.sendText('This is text');
+})
+
 app.all('/*', (req, res) => {
     res.sendFile(__dirname + "/pages/" + "404.html")
 })
@@ -30,6 +35,7 @@ io.createServer(connection => {
             var str = data.match(/(?<=:).*/)
             if (str == 'HDUwenjuan123') {
                 connection.sendText('question:;,"radio","q1","1.会了吗","2","YES","NO","A.会了","B.不会",;,"textarea","q2","1附加.说出你学会了的感想。",;,"checkbox","q3","2.你会以下那些语言","6","0","6","java","python","c","c++","c#","go","A.java","B.python","C.c","D.c++","E.c#","F.go",;')
+                connection.sendText('link:;,"q2","q1","YES",;')
             }
         } else if (r == 'result') {
             connection.sendText('done:')

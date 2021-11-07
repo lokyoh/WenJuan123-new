@@ -208,7 +208,13 @@ function submitar() {
 
 function submitData(str) {
     // 数据上传到服务器中
-    ws.send("result:" + str);
+    ws = new WebSocket('ws://localhost:3000');
+    ws.onopen = () => {
+        ws.send("result:" + str);
+    }
+    ws.onmessage = (e)=>{
+        finish();
+    }
     var content = document.getElementById("content");
     content.innerHTML = "<div class='box' id='box'>提交中...请等待服务器响应<br>如果长时间未响应请通过QQ联系Franklin3:2294678765</div>";
     content.style.height = 80+"vh";
@@ -258,6 +264,7 @@ function finish() {
 }
 
 ws.onmessage = function (e) {
+    console.log(e);
     var se = '' + e.data;
     var a = se.match(/.*?(?=:)/);
     if(a=="question"){
@@ -266,8 +273,7 @@ ws.onmessage = function (e) {
     }else if(a=="link"){
         var str = se.match(/(?<=:).*/);
         inputvis(str);
-    }else if(a=="done"){
-        finish();
+        ws.close();
     }
 }
 
